@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ isset($title) ? $title . ' - Chirper' : 'Chirper' }}</title>
+        <title>{{ isset($pagetitle) ? $pagetitle . ' - Chirper' : 'Chirper'}}</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
@@ -14,9 +14,11 @@
                 <button class="btn" type="button">Sign out</button>
             </nav>
         </header>
+
         <main class="flex-1 container mx-auto">
             {{ $slot }}
         </main>
+
         <footer class="footer footer-center p-5 bg-base-300 text-xs">
             ©️ 2026 Chirper - Build with laravel
         </footer>
